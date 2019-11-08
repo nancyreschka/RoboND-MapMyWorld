@@ -78,5 +78,5 @@ Setup RViz to visualize the sensor readings. On the left side of RViz, under Dis
 * Select odom for fixed frame
 * Click the Add button and
   * add RobotModel and your robot model should load up in RViz.
-  * add Camera and select the Image topic "rgb/image_raw" that was defined in the camera Gazebo plugin
+  * add Camera and select the Image topic "/camera/rgb/image_raw" that was defined in the camera Gazebo plugin
   * add LaserScan and select the topic "/scan" - that was defined in the Hokuyo Gazebo plugin
