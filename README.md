@@ -3,7 +3,7 @@ This is the code for my Udacity Robotics Software Engineer Nanodegree  - Go Chas
 
 ### Output
 After launching the world the Building, MobileRobots, the Robot (with camera and lidar), and a white ball are displayed inside a Gazebo World. It should launch as follow:
-![alt text](images/output.png)
+![alt text](images/output.gif)
 
 ### Directory Structure
 ```
