@@ -24,7 +24,6 @@ After launching the world the Building, MobileRobots, the Robot (with camera and
     │   ├── CMakeLists.txt             # compiler instructions
     │   ├── package.xml                # package info
     ├── ball_chaser                    # ball_chaser package
-    │   ├── include                    # include folder for include files
     │   ├── launch                     # launch folder for launch files
     │   │   ├── ball_chaser.launch
     │   ├── src                        # source folder for C++ scripts

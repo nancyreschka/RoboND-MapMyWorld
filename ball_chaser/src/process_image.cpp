@@ -29,8 +29,10 @@ void process_image_callback(const sensor_msgs::Image img)
     int white_pixel = 255;
 
     // Loop through each pixel in the image and check if there's a bright white one
-    for (int i = 0; i < img.step * img.height; i++) {
-        if (img.data[i] == white_pixel) {
+    for (int i = 0; i < img.step * img.height; i+=3) {
+        // check if all values are white (RGB)
+        // RGB values of a pixel are arranged in a sequence in a row for all the pixels of that row
+        if (img.data[i] == white_pixel && img.data[i+1] == white_pixel && img.data[i+2] == white_pixel) {
             bright_white_found = true;
             pixel_index = i % img.step;
             break;
@@ -46,13 +48,13 @@ void process_image_callback(const sensor_msgs::Image img)
         int right_bound = img.step - left_bound;
         // if ball was sighted on left side
         if(pixel_index < left_bound)
-            drive_robot(0.5, 0.5);
+            drive_robot(0.1, 0.5);
         // ball was sighted directly in front of
         else if(pixel_index >= left_bound && pixel_index < right_bound)
             drive_robot(0.5, 0.0);
         // ball was sighted on right side
         else
-            drive_robot(0.5, -0.5);
+            drive_robot(0.1, -0.5);
     }
     // Request a stop when there's no white ball seen by the camera
     else
