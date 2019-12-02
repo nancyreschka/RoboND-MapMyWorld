@@ -77,8 +77,6 @@ In a new terminal clone the ros-teleop package to your src folder:
 ```sh
 $ cd /home/workspace/catkin_ws/src
 $ git clone https://github.com/ros-teleop/teleop_twist_keyboard
-$ source devel/setup.bash
-$ roslaunch my_robot amcl.launch
 ```
 Build the package, source the setup script, and run the package:
 ```sh
