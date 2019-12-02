@@ -41,7 +41,7 @@
   </joint>
 
   <joint type="fixed" name="hokuyo_joint">
-    <topicName>/scan</topicName>
+    <topicName>my_robot/laser/scan</topicName>
     <origin xyz="0.15 0 .075" rpy="0 0 0"/>
     <child link="hokuyo"/>
     <parent link="chassis"/>
