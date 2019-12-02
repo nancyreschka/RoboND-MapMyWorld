@@ -38,16 +38,10 @@ After launching the world the Building, MobileRobots, the Robot (with camera and
 
 ### Steps to launch the simulation
 
-#### Clone the project folder i.e. in workspace /home/workspace/
-```sh
-$ cd /home/workspace/
-$ git clone https://github.com/nancyreschka/RoboND-GoChaseIt.git
-```
-
-#### Copy the my_robot and ball_chaser folders into the source directory of Catkin workspace /home/workspace/catkin_ws/src
-
+#### Clone the repository in tha catkin workspace i.e. /home/workspace/catkin_ws/src
 ```sh
 $ cd /home/workspace/catkin_ws/src
+$ git clone https://github.com/nancyreschka/RoboND-GoChaseIt.git
 ```
 
 #### Compile the code
@@ -56,19 +50,42 @@ $ cd /home/workspace/catkin_ws/
 $ catkin_make
 ```
 
-#### Launch the robot inside the world 
+#### Launch the robot inside the world and RViz
 ```sh
 $ cd /home/workspace/catkin_ws/
 $ source devel/setup.bash
 $ roslaunch my_robot world.launch
 ```
 
-#### Run the ROS nodes drive_bot and process_image
+#### Launch the Monte Carlo Localization
 In a new terminal:
 ```sh
 $ cd /home/workspace/catkin_ws/
 $ source devel/setup.bash
-$ roslaunch ball_chaser ball_chaser.launch
+$ roslaunch my_robot amcl.launch
+```
+
+#### Load the configuration file in RViz
+The configuration file RvizSettings.rviz can be found in:
+```sh
+/home/workspace/catkin_ws/my_robot/launch
+```
+
+#### OPTIONAL: Run Teleop Package
+If you prefer to control your robot to help it localize itself, you would need to add the teleop node to your package. Thanks to the ROS community, we could use ros-teleop package to send command to the robot using keyboard or controller.
+In a new terminal clone the ros-teleop package to your src folder:
+```sh
+$ cd /home/workspace/catkin_ws/src
+$ git clone https://github.com/ros-teleop/teleop_twist_keyboard
+$ source devel/setup.bash
+$ roslaunch my_robot amcl.launch
+```
+Build the package, source the setup script, and run the package:
+```sh
+$ cd ..
+$ catkin_make
+$ source devel/setup.bash
+$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
 #### Visualize the robot's camera image in RViz
