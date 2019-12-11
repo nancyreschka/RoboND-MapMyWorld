@@ -22,6 +22,7 @@ After launching the world the Building, MobileRobots, and the Robot (with camera
     │   ├── localization.gif
     │   ├── output1.png
     │   ├── output2.png
+    │   ├── rviz.png
     ├── my_robot                                # my_robot package
     │   ├── config                              # config files for the move base node
     │   │   ├── base_local_planner_params.yaml
