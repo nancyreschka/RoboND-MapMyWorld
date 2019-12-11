@@ -12,11 +12,25 @@
     <param name="base_frame_id" value="robot_footprint"/>
     <param name="global_frame_id" value="map"/>
 
-    <!-- Define initial pose here -->
-    <param name="initial_pose_x" value="-1"/>
-    <param name="initial_pose_y" value="-8"/>
+    <!-- Define robot's initial pose here -->
+    <param name="initial_pose_x" value="30"/>
+    <param name="initial_pose_y" value="0"/>
+    <param name="initial_pose_a" value="-1.57"/>
 
-<!--    <param name="transform_tolerance" value="0.2"/>-->
+    <!-- Define parameters for overall filter -->
+    <param name="min_particles" value="50"/>
+    <param name="max_particles" value="500"/>
+    <param name="update_min_d" value="0.02"/>
+    <param name="update_min_a" value="0.05"/>
+
+    <!-- Define laser model parameters -->
+    <param name="laser_model_type" value="likelihood_field"/>
+    <param name="laser_min_range" value="-1"/>
+    <param name="laser_max_range" value="-1"/>
+    <param name="laser_max_beams" value="30"/>
+    <param name="laser_z_hit" value="0.95"/>
+    <param name="laser_z_rand" value="0.05"/>
+    <param name="use_map_topic" value="true"/>
   </node>
 
   <!-- Move Base -->
