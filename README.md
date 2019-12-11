@@ -59,6 +59,13 @@ $ cd /home/workspace/catkin_ws/src
 $ git clone https://github.com/nancyreschka/RoboND-WhereAmI.git
 ```
 
+#### Initialize submodules
+```sh
+$ cd RoboND-WhereAmI
+$ git submodule init
+$ git submodule update
+```
+
 #### Compile the code
 ```sh
 $ cd /home/workspace/catkin_ws/
