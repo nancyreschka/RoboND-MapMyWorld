@@ -1,4 +1,4 @@
-# RoboND-WhereAmI
+# RoboND-MapMyWorld -  TBD
 This is the repository for my Udacity Robotics Software Engineer Nanodegree Project - Where Am I. It creates a simulation world with Gazebo which includes a robot equipped with a camera and lidar sensor. The robot localizes itself with the Monte Carlo Localization.
 
 ### Output
