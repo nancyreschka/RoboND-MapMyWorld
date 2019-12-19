@@ -40,6 +40,12 @@
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
 
+  <joint name="camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
+    <parent link="camera"/>
+    <child link="camera_link_optical"/>
+  </joint>
+
   <joint type="fixed" name="hokuyo_joint">
     <topicName>my_robot/laser/scan</topicName>
     <origin xyz="0.15 0 .075" rpy="0 0 0"/>
@@ -168,6 +174,8 @@
       </geometry>
     </visual>
   </link>
+
+  <link name="camera_link_optical"></link>
 
   <link name='hokuyo'>
     <inertial>
