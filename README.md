@@ -149,7 +149,7 @@ The node can be activated in the mapping.launch file. Just uncomment it and then
 
 The mapping launch file acts as the main node that interfaces with all the required parts to be able to perform SLAM (Simultaneous localization and mapping) with RTAB-Map while using a previous generated map database.
 
-The database-file rtabmap.db is located in my_robot/maps/. It can be viewed and analysed with the help of rtabmap-databaseViewer, see [Visualizing the mapping database](#OPTIONAL:-Visualizing-the-mapping-database).
+The database-file rtabmap.db is located in my_robot/maps/. It can be viewed and analysed with the help of rtabmap-databaseViewer, see section "Visualizing the mapping database".
 
 #### AMCL
 
