@@ -62,7 +62,7 @@ After launching steps 4 and 5 you can choose to generate a map-database (step 6a
 #### 1 Clone the repository in the catkin workspace i.e. /home/workspace/catkin_ws/src
 ```sh
 $ cd /home/workspace/catkin_ws/src
-$ git clone https://github.com/nancyreschka/RoboND-WhereAmI.git
+$ git clone https://github.com/nancyreschka/RoboND-MapMyWorld.git
 ```
 
 #### 2 Initialize submodules
@@ -149,7 +149,7 @@ The node can be activated in the mapping.launch file. Just uncomment it and then
 
 The mapping launch file acts as the main node that interfaces with all the required parts to be able to perform SLAM (Simultaneous localization and mapping) with RTAB-Map while using a previous generated map database.
 
-The database-file rtabmap.db is located in my_robot/maps/. It can be viewed and analysed with the help of rtabmap-databaseViewer, see [Visualizing the mapping database](#OPTIONAL: Visualizing the mapping database).
+The database-file rtabmap.db is located in my_robot/maps/. It can be viewed and analysed with the help of rtabmap-databaseViewer, see [Visualizing the mapping database](#OPTIONAL:-Visualizing-the-mapping-database).
 
 #### AMCL
 
@@ -175,6 +175,7 @@ The move_base package is a very powerful tool. It utilizes a costmap - where eac
 What makes this package more remarkable is that it has some built-in corrective behaviors or maneuvers. Based on specific conditions, like detecting a particular obstacle or if the robot is stuck, it will navigate the robot around the obstacle or rotate the robot till it finds a clear path ahead.
 
 #### OPTIONAL: Visualizing the mapping database
+# 
 
 The generated databvase of the map can be visualized with the help of rtabmap-databaseViewer.
 
